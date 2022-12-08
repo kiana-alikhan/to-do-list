@@ -1,7 +1,7 @@
 html {
   display: flex;
   justify-content: center;
-  background-color: rgb(148, 135, 135);
+  background-color: rgb(197, 190, 190);
 }
 h1 {
   color: #282c34;
@@ -13,21 +13,24 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(15, 51, 22);
+  background-color: rgb(6, 5, 31);
   width: 400px;
   padding: 5px;
 }
 
 .add-task {
   font-weight: bold;
-  background-color: rgb(134, 89, 29);
-  color: #fff;
+  background-color: rgb(101, 99, 98);
+  color: rgb(217, 135, 28);
   border: none;
   padding: 8px 5px;
+  border-radius: 5px;
 }
 .selected {
-  background-color: rgb(134, 89, 29);
-  color: #fff;
+  background-color: rgb(101, 99, 98);
+  color: rgb(217, 135, 28);
+  border-radius: 5px;
+
   font-weight: bold;
   border: none;
   padding: 8px;
@@ -38,12 +41,13 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: rgba(29, 128, 26, 0.698);
+  background-color: rgba(41, 41, 40, 0.975);
   margin: 0px 0px;
 }
 
 .todo {
-  background-color: rgb(241, 207, 83);
+  /* background-color: rgb(101, 99, 98); */
+  background-color: rgb(105, 101, 90);
   margin: 10px;
   border-radius: 5px;
   padding: 8px;
@@ -52,14 +56,16 @@ h1 {
 }
 .fa-trash-o {
   margin: 5px;
-  border-color: rgb(15, 51, 22);
+  border-color: rgb(18, 18, 18);
   color: rgb(1, 28, 8);
   background-color: rgb(217, 135, 28);
   font-weight: bold;
+  border-radius: 5px;
 }
 
 .fa-pencil {
   border-color: rgb(15, 51, 22);
   background-color: rgb(217, 135, 28);
   color: rgb(1, 28, 8);
+  border-radius: 5px;
 }
