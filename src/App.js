@@ -1,41 +1,41 @@
+import { useState } from 'react';
 import './App.css';
-
+import Modal from './Components/Modal';
 const App = () => {
+  const [isShowModal, setIsShowModal] = useState(false);
+
+  const handleCLick = () => {
+    setIsShowModal(true);
+  };
+
   return (
     <>
-      <h1>TODO LIST</h1>
-      <div className="header-list">
-        <button className="add-task">Add Task</button>
-        <select className="selected">
-          <option>All</option>
-          <option>works</option>
-          <option>classes</option>
-          <option>celebraite</option>
-        </select>
+      <div className="content">
+        <h1>TODO LIST</h1>
+        <form>
+          <label className="header-list">
+            <button className="toggle-button">Add Task</button>
+            <select className="selected">
+              <option>All</option>
+              <option>works</option>
+              <option>classes</option>
+              <option>celebraite</option>
+            </select>
+          </label>
+          <div className="container">
+            <label className="todo">
+              <input type="checkbox"></input>
+              <span>
+                <i className="fa fa-trash-o  fa-border" onClick={handleCLick} />
+                <i className="fa fa-pencil fa-border " aria-hidden="true" />
+              </span>
+            </label>
+          </div>
+        </form>
       </div>
-      <div className="container">
-        <div className="todo">
-          <input type="checkbox"></input>
-          <span>
-            <i className="fa fa-trash-o fa-border"></i>
-            <i class="fa fa-pencil fa-border" aria-hidden="true"></i>
-          </span>
-        </div>
-        <div className="todo">
-          <input type="checkbox"></input>
-          <span>
-            <i className="fa fa-trash-o fa-border"></i>
-            <i class="fa fa-pencil fa-border" aria-hidden="true"></i>
-          </span>
-        </div>
-        <div className="todo">
-          <input type="checkbox"></input>
-          <span>
-            <i className="fa fa-trash-o  fa-border"></i>
-            <i className="fa fa-pencil fa-border " aria-hidden="true"></i>
-          </span>
-        </div>
-      </div>
+      {isShowModal && (
+        <Modal isShowModal={isShowModal} setIsShowModal={setIsShowModal} />
+      )}
     </>
   );
 };
